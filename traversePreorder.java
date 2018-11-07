@@ -1,12 +1,12 @@
 import java.util.Stack;
 
-public class VisibleNodes {
+public class traversePreorder {
 	
 	public static void main(String args[])
 	{
 		BinaryTree T = new BinaryTree(8, new BinaryTree(2, new BinaryTree(8, null, null), new BinaryTree(7, null, null)), new BinaryTree(6, null, null));
 		int answer = solution(T);
-		System.out.println("Number of Visible nodes: " + answer); 
+		//System.out.println("Number of Visible nodes: " + answer); 
 	}
 	
 	public static int solution(BinaryTree T)
@@ -30,7 +30,7 @@ public class VisibleNodes {
 			//If the left child is null, move to right child
 			if(T.l == null)
 			{
-				System.out.print(T.x + "");
+				System.out.print(T.x + " ");
 				T = T.r; 
 			}
 			else
@@ -55,7 +55,7 @@ public class VisibleNodes {
 				//print this node and make right child point to this node
 				else
 				{
-					System.out.print(T.x + "");
+					System.out.print(T.x + " ");
 					current.r = T; 
 					T = T.l; 
 				}
